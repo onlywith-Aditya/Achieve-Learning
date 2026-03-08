@@ -1,0 +1,360 @@
+1. //-----------------------Imp-Points--|
+// There can be only one public cllass in java file.
+
+// JDK-> JRE-> JVM.
+
+// Method Overloading->  When different method of same name and are used in one/self class.
+
+// Local Variable and Instance Variable.
+    -> Instance variables are variable which are part of class, but not method.
+    -> Local variables are part of class and method both.
+
+//-----------------------Imp-Points--|
+
+
+2. //-----------------------Memory---|
+
+
+    1. There are two part in memory-> Stack and Heap.
+    2. Reference Variable-> Stack.
+    3. Local Variable-> Stack.
+    4. Created Object-> Heap.
+        Two parts-> Address
+            1st-> Instance variable-> Heap.
+            2nd->  Methods-> Heap.
+    5. Addrss of Object-> Stack 
+
+//-----------------------Memory---|
+
+
+3. //-----------------------Object---|
+
+    1. We can create mulitple object, and change value of one object cannot make any difference of another object. 
+
+//-----------------------Object---|
+
+
+4. //-----------------------Array---|
+
+    -> 1-D
+    -> 2-D
+    -> Jagged Array-> This type of array are array in which sized in not mention, in multidimensioned array.
+
+    -> By-Default-> Value of int array is '0'.
+    -> Access element more than size-> Exception.
+    -> Size of Array-> .length.
+    
+//-----------------------Array---|
+
+
+5. //-----------------------Loops---|
+
+    -> For Loop
+    -> While Loop
+    -> Do While Loop
+    -> For Each
+    -> Enhance For Loop
+
+    
+//-----------------------Loops---|
+
+6. //-----------------------String---|
+
+    -> In Java, String is not data type it is class.
+        -> Notice: All data types are start with small character, but String is start with upper character mean it is class.
+    -> Stack-> Heap Memory.
+    -> Stack-> Method.
+    -> Stack-> "new" keyword.
+
+    -> Concatenation-> + / Fucntion(.concat)
+
+    -> Type of String->
+        1. Mutable String->  Change.
+        2. Immutable String-> Can't Change.
+
+    -> By default String are Immutable.
+
+    -> If you want to used Mutable String, you can use StringBuffer or StringBuilder.
+
+
+//-----------------------String---|
+
+7. //-----------------------StringBuffer---|
+
+
+    -> String-> Mutable.
+    -> By-default it keep 16 as buffer storage.
+    -> Mean if in case there is not extra memory for string to store in that case it will use this 16 of storage.
+    -> To convert StringBuffer into String we can used toString() method
+
+
+
+//-----------------------StringBuffer---|
+
+8. //-----------------------Static---|
+
+    -> This is used in case we have to make varible same and used by all, and it affect all users in case of change.
+    
+    -> Also we have to use static variable with class not with used of object.(Warning)
+    
+    -> Memory
+        -> There is different area in your JVM for static varibles.
+
+    -> Static is belongs to class not object.
+
+//-----------------------Static---|
+
+
+9. //-----------------------Static Block---|
+
+
+    -> It called only once.
+    -> Used static{} class.
+    -> initialized First, because of class laoder.
+    -> In case if we don't call object it doesn't call class loader.
+
+    -> If we only want to load the class it, we can use special class, which is class "Class". 
+    -> And in that we used method "forName"-> Loads Class.
+        -> It throw Exception.
+
+
+    Reference- >Static_block.java
+
+
+//-----------------------Static Block---|
+
+
+10. //-----------------------Object & Class Memory---|
+
+    -> Every time we get object, our class load and object get initialized.
+    -> In JVM, there is area called-> Class Loader.
+
+    -> Class Loader-> Have all class laoder, it loaded from library to class loader.
+        -> It happends only once.
+
+     
+//-----------------------Object & Class Memory---|
+
+
+11. //-----------------------Static Method---|
+
+
+    -> We can use static instance variable in static method.
+    
+    -> But we can't use non-static instancer variable in static method.
+
+    -> We can't call object with Class.
+    
+    -> To get non-static instance variable we have to pass it as arguments.
+
+
+
+//-----------------------Static Method---|
+
+
+12. //
+-----------------------String-Constant-Pool---|
+
+    -> So, Reference variables-> Stack.
+    -> JVM-> Heap-> Object
+    -> Heap-> Stack-> Stack Constant Pool.
+
+    -> So in java, when we create string it stored in string-constant-pool where it is stored and we cannot change it.
+        -> Ex-> Strign s1 = "Aditya"
+                s1 = s1 + "Dadhich"
+                -> Output-> Aditya Dadhich
+    -> But in this s1 is reference varaible and string "Aditya" is stored in string-object-pool but when we change it cannot change or replace by Aditya Dadhich.
+    -> So conclusion is-> Seperate space is created for "Aditya Dadhich" in stack constant pool.
+    -> And old "Aditya" after certain time is go to garbage collection.
+
+//-----------------------String-Constant-Pool---|
+
+
+13. //
+-----------------------Encapsulation---|
+
+    -> Always make instance variable as private, never give it full access.
+
+//
+-----------------------Encapsulation---|
+
+14. //
+-----------------------Constructors---|
+
+    -> Every time we create an object it call Constructors.
+
+    -> Constructors Overloading
+    
+    -> Super-> Every Constructors in java has  this method super() by default.
+
+//
+-----------------------Constructors---|
+
+
+
+15. //-----------------------this & super---|
+
+    -> Super-> Every Constructors in java has  this method super() by default.
+    
+    -> Super-> Mean call the constructors of super class.
+
+    -> Child class inherit-> Parent Class and Parent Class  inherit-> Object Class.
+
+
+    -> (this)
+    Execute constructor of same class
+
+
+//-----------------------this & super---|
+
+
+16. //-----------------------Inheritance---|
+
+    -> Types
+        -> Single Level Inheritance.
+        -> Multi Level Inheritance.
+        -> Hierarhical Inheritance.
+
+//-----------------------Inheritance---|
+
+
+17. //-----------------------Interface---|
+
+    -> In interface all object are "public abstract".
+    -> All variables in interface are by default Static and Final.
+    -> We can achieve multiple inheritance.
+    -> Also we can used Abstract class with interface.
+    -> We can use mulitple interfaces.
+ 
+//-----------------------Interface---|
+
+18. //-----------------------Enum---|
+
+    -> It is used to name a constant.
+    -> Every enum is a assign a number, so in java it start with 0.
+    -> We cannot extend enum with any other class.
+ 
+//-----------------------Enum---|
+
+19. //-----------------------Annotation---|
+
+    -> It is a form of syntatic metadata that provides additional information about a program to the compiler, build tools, or the runtime environment, without affecting the execution of the code itself.
+ 
+//-----------------------Annotation---|
+
+
+20. //-----------------------Types-of-Interface---|
+
+    1. Normal Interface.
+        -> Interface with two or more methods is called normal interface.
+
+    2. Functional/SAM(Single Abstract Method) Interface.
+        -> Interface with onlt single abstract method it called Functional/SAM interface.
+
+        -> We can access Interface without creating new class using Annoymous Class.
+        -> In JAVA 8, we can use lambda(->) expresssion only with SAM interface.
+
+
+    3. Marker Interface.
+        -> Blank Interface, no method.Usage-> [#Serialization and #Deserialization]
+
+//-----------------------Types-of-Interface---|
+
+
+21. //-----------------------Exceptions---|
+
+    -> Types of Errors->
+        1. Compile Time Errors.
+        2. RunTime Errors. -> Execution Stops-> Exception
+        3. Logical Errors.
+    
+    -> Handel Erros we used Exception Handling.
+ 
+//-----------------------Exceptions---|
+
+
+
+
+
+--------------------------------------------------------------------------------------|
+
+
+
+999. //-----------------------In-built Method---|
+
+    1. Using random values in Java.
+        -> Math.random
+        -> Gives double values.
+
+    2. hashcode()
+        -> A method that returns an integer value(has code) for an object.
+        -> Used for fast lookup in hash-based collection like HashMap, HashSet.
+
+    3. Anonymous Object
+        -> Object who don't have name.
+        -> Don't use reference for it.
+        -> Example-> new A();
+    
+
+//-----------------------In-built Method---|
+
+
+1000. //-----------------------Point To Remember---|
+
+    -> Why we use Static Keyword in main method.
+        
+        Ans-> 
+        1. If we don't use static then main become non-static method. 
+        2. Mean to call main we have to first insance of demo(Class).
+        3. But main is starting point of execution.
+        4. If execution is not started how we create object of demo(Class).
+
+        Hence, it is problem of Deadlock to solve this we have to used static.
+
+    
+    -> Your method name define intention of make this method.
+
+    -> Every class in java extends object class.
+
+
+    -> Ambigouty Problem in Inheritance-> Don't know what to choose(Multiple Inheritanec).
+        -> Reason Java don't have multiple inheritance.
+
+
+    ------> Important.
+    -> class-> class -> extends
+    -> class-> interface-> implments
+    -> interface-> interface-> extends
+
+    -> To get name of class we can use
+        -> getclass().getSupercclass();
+
+
+//-----------------------Point To Remember---|
+
+
+
+------------------------------------------------
+--------------------------------------|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
