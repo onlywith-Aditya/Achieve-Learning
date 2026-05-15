@@ -1,0 +1,36 @@
+- ADT(Abstract Data Type)->
+    -> In Java, an Abstract Data Type (ADT) is a conceptual model that defines what a data structure does (its operations) without specifying how it is implemented.
+    -> It focus on behaviour of data rather than the underlying memory organization.
+
+1. Array
+    -> operations   
+        a. Insertion
+            -> Start, End and Middle or Specific Location.
+        b. Deletion
+        c. Time Complexity
+        d. Space Complexity
+
+2. Searching
+    -> Linear Search
+        - Time Complexity O(n)
+    -> Binary Search
+        - Time Complexity O(log n)
+
+3. Sorting
+    -> Not Efficient 
+        -> Bubble Sort O(n^2)
+        -> Selection Sort O(n^2)
+             - Number of Swap Reduce.
+             - Better in terms of Swapping as compared to Bubble Sort.
+        -> Insertion Sort   
+            - Not do swapping, we do shifting.
+            - We used for and while loop. 
+    -> Efficient
+        -> Quick Sort(Divide & Conquer)
+            -> Recursion
+            -> Pivot 
+            -> Partition
+            -> Tree Structure
+            -> Time Complexity O(n log n)
+
+-> 2:25:52
