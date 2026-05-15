@@ -270,9 +270,140 @@
     
     -> Handel Erros we used Exception Handling.
  
+    -> Hierarhic of Exception
+
+            Object
+              |
+            Throwable
+              |
+          ------------------------
+          |                      |
+        Errors                Exception
+    [Can't Handle]             [Handle]
+    -> Thread Death             -> Run-time Exception[Unchecked Exception]
+    -> IO Errors                -> SQL Exception[Checked Exception] 
+    -> Virtual Machine Error    -> IO Exception
+    -----------------------------------------------------
+
+    -> Checked Exceptions->
+        -> Compile not force you to handle exception.
+        -> Ex->
+            - Arithmetic Exception
+            - ArrayIndexOutOfBound
+            - Null Pointer
+
+    -> Unchecked Exceptions->
+        -> Compile will tell you to handle exception.
+        -> Ex->
+            - SQL Exception
+            - IO Exception
+
 //-----------------------Exceptions---|
 
+22. //-----------------------Throw---|
 
+    -> It is used to throw exception by keyword throw.
+    Syntax->
+    throw Exception_Name();
+
+
+    -> We can also throw own exception by creating class and constructor for parameters.
+    -> NOTE->>>>> You have to extends Exception class also.
+    -> Also to catch exception you have to use Super(string) in constructor.
+ 
+//-----------------------Throw---|
+
+
+23. //-----------------------ThrowS---|
+
+    -> This is used to throws exception to main method and it will handle exception.
+ 
+//-----------------------ThrowS---|
+
+
+24. //-----------------------Input-From-Users---|
+
+    -> System.in.read()-> ASCII Value.
+    -> BufferedReader-> Import BufferedReader & InputStreamReader
+        -> It take input from anywhere, mean file also.
+        -> Also we have to close resource.[Not Mendatory But Prefer]
+
+//-----------------------Input-From-Users---|
+
+
+25. //-----------------------Finally---|
+
+    -> We used it to execute, commands in all condition.
+    -> Mostly we used it to close the resources.
+ 
+//-----------------------Finally---|
+
+
+26. //-----------------------Threads---|
+
+    -> We can use threads by extends "Thread Class".
+    -> We can also fix thread priority.(.getprioity)
+    -> Thread priority range from 1 to 10, and 5 is default.
+    -> To check print-> .getPriority().
+
+    -> Using priority we just suggest, not forcefully implemenet.
+
+    -> Thread Sleep
+        -> This used to delay thread execution.
+
+    -> Also implement Thread with implement Runnable.
+
+        -> Runnable method is not working with start(), for that we have to make reference varibles of thread.
+
+        -> Thead t1 = new Thread();
+        -> t1.start();
+
+    -> Lambda Expression Thread
+    -> Thread-> join()
+
+    -> Thread State
+        -> new
+        -> runnable
+        -> running
+        -> waiting
+        -> dead
+    
+    -> Thread State commands
+        -> start()
+        -> run()
+        -> stop()
+        -> stop()
+        -> notify()
+        -> sleep()/ wait()
+ 
+//-----------------------Threads---|
+
+27. //-----------------------Collection APIs---|
+
+    -> It is used to work with all data structure with help of APIs.
+    
+    -> Collection.util
+        -> List
+            -> ArrayList
+            -> LinkedList
+
+        -> Queue
+            -> Dequeue
+
+        -> Set
+            -> HashSet
+            -> LinkedList HashSet
+
+        -> Map
+
+    -> Collection class work on object, so if we have to iterate or define data type we have to imply it.
+        -> Collection<Integer> nums = new ArrayList<Integer>
+
+            -> We used it to handle exception and compiler error.
+
+            -> 11:29:00 to 11:55:00
+            
+//-----------------------Collection APIs---|
 
 
 

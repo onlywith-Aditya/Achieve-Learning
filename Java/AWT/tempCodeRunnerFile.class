@@ -1,0 +1,24 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+
+public class AWT_Basic {
+   public AWT_Basic() {
+   }
+
+   public static void main(String[] var0) {
+      Frame var1 = new Frame("Application");
+      Button var2 = new Button("Click ME");
+      Label var3 = new Label("Enter Name:");
+      TextField var4 = new TextField(20);
+      var1.setLayout(new FlowLayout());
+      var1.add(var3);
+      var1.add(var4);
+      var1.add(var2);
+      var1.setSize(400, 300);
+      var1.setVisible(true);
+   }
+}
