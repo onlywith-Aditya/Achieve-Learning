@@ -32,5 +32,24 @@
             -> Partition
             -> Tree Structure
             -> Time Complexity O(n log n)
+        -> Merge Sort
+            -> Divide(Mid) 
+            -> Merge
 
--> 2:25:52
+4. Linked List
+    -> We have to two ways, create by own.
+    -> Use Feature
+        -> java.util.LinkedList;
+    -> This all belongs to class Collections.
+        -> We have to define type of data type.
+            -> LinkedList<Integer> nums = new Linked();
+    
+    -> Operations
+
+5. Stack
+
+6. Queue
+
+7. Circular Queue
+
+8. Tree
