@@ -1,0 +1,144 @@
+- System design is designgin a system in a manner that it can be scalable according to usablitiy.
+
+- It is of two types->
+    1. High level design(Designing)
+        -> In which we design things like database, message queue and cache.
+    
+    2. Low lelve design(Coding)
+        -> Design API 
+        -> Class Diagram
+
+----------------------------------------------------|
+
+- Functional Requirement
+    1. Functional Requirement
+        -> User can signup and login.
+        -> User can buy a subscription.
+        -> User can play/pause a video..
+    
+    2. Non-Functional Requirement
+        -> Secure system with authentication.
+        -> Low latency for video.
+        -> Scalable system
+
+----------------------------------------------------|
+
+1. High Level Design-> GUIDE
+
+    [a] Fundamentals
+        - Serverless vs Serverful
+        - Horizontal and Vertical Scaling
+        - What are threads?
+        - What are pages?
+        - How deos the internet work?
+
+    [b] database    
+        - SQL vs NOSQL Database
+        - In-memory Database
+        - Data Replication and Migrartion
+        - Data Partitioning
+        - Sharding
+    
+    [c] Consitency and Avaiability
+        - Data Consitency and its level
+        - Isolation and its level
+        - CAP Theoram
+    
+    [d] Cache 
+        - What is Cache? (Redis, Memcahed)
+        - Write Policies: write back, through and around
+        - Replacement Policies: LFU, LRU, Segemnted LRU etc.
+        - Content Delivery Networks(CDNs)
+
+    [e] Networking
+        - TCP vs UDP
+        - What is http(1/2/3) vs https?
+        - Web sockets
+        - WebRTC & Video Streaming
+    
+    [f] Load Balancers
+        - Load Balancing Algorithms(Stateless and Stateful)
+        - Consitent Hashing
+        - Proxy and Reverse Proxy
+        - Rate Limiting    
+    
+    [g] Message Queues
+        - Asynchronous Processing(Kafka, RabbitMQ)
+        - Publisher-Subscriber Model
+
+    [h] Monoliths vs Microserves
+        - Why Microserves
+        - Concept of 'Single Point of Failure'
+        - Avoiding Cascading Failure
+        - Containerization(Docker) 
+    
+    [i] Monitoring & Logging
+        - Logging event and Monitorig metrics
+        - Anomaly Detection
+    
+    [j] Security
+        - Token for authentication
+        - SSO & OAuth
+        - Acess Control Lists and Rule Engines
+        - Encryption
+    
+    [k] System Design Tradeoffs
+        -  Push and Pull Architecture
+        - Consistency and Avaiability
+        - SQL vs NoSQL Database
+        - Memory vs latency
+        - Throughtput vs latency
+        - Accuracy vs latency
+
+----------------------------------------------------|
+
+-> Practice
+    1. Youtube
+    2. Twitter
+    3. WhatsApp
+    4. Uber
+    5. Amazon
+    6. Dropbox/ Google Drive
+    7. Netflix
+    8. Instagram
+    9. Zoom
+   10. Booking.com/ Airbnb
+
+----------------------------------------------------|
+
+2. Low Level Design
+    
+    [a] OOps-> SOLID Principles
+
+    [b] Design Patterns
+        - Creational(sigleton, factory, etc)
+        - Structural(Proxy, Bridge, etc)
+        - Behavioral(Strategy, Command, Observation, etc)
+
+    [c] Concurrency ad Thrad Safety
+        - Thread safe injection
+        - Locking mechanism
+        - Producer-consumer
+        - Race condition & Synchronization
+
+    [d] UMP Diagram[Optinal]
+     
+    [e] APIs
+        - API design
+        - req/resobject modeling
+        - versioning & extensibility
+        - Clean code Principles: DRY, SRP, etc.
+        - Avoiding God classes
+    
+----------------------------------------------------|
+
+-> Problems
+    1. Design a Parking lot
+    2. Design an Elevator System with multiple lifts
+    3. Design a Notification System
+    4. Design a Food delivery WhatsApp
+    5. Design a Movie ticket booking system
+    6. Design a URL shortener
+    7. Design a Logging Framework
+        
+----------------------------------------------------|i

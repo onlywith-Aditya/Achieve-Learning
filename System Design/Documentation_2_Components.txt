@@ -1,0 +1,195 @@
+--> Data
+    - Image
+    - Audio
+    - Video
+    - Text
+
+--> Database- To save data.
+
+--> Application Code-> There are multiple different database and we have to use it, so we used APIs/Endpoints.
+    - We hide complexity  of database and use only accessible things to our code.
+
+----------------------------------------------------|
+
+--> To connect database with application code, we are using protocols like:- IP | HTTPS | TCP and etc.
+
+----------------------------------------------------|
+
+-------> APIs
+
+    - How to send data to APIs?
+    - How to fetch data from APIs?
+    - There is mid level that is client layer which used to communicate between client and server and used by user/us.
+
+----------------------------------------------------|
+
+--> To connect Application code with Client Application, we are using protocols like:- IP | HTTPS | TCP and etc.
+
+----------------------------------------------------| IPAD Image
+
+                |------SERVER------|
+    Client <->  | Application Code |  <-> Database
+                |------------------|
+                         |            
+                         |   
+                         | 
+            |------Other' SERVER------|            
+            |    Applciation Code     |  
+            |-------------------------|   
+
+
+            |-------------------------|            
+            |          CACHE          |  
+            |-------------------------|   
+
+----------------------------------------------------|
+
+--> Cache-> It is used to store frequently used data, so that user can fetch it faster.
+
+----------------------------------------------------|
+
+--> Load Balance-> It is used to  decide which server to use, and fetch data. It is responsible for two task:- Health of server | Divide request for each server equally.
+
+----------------------------------------------------|
+
+->Whenever order place we have to send message to user for conformation.
+1. Synchronous Calls-> In this we have to wait for message to further process.
+2. Asynchronous Calls-> We don't have to wait for messsage we can further process.
+
+--> Message Queue-> In Asynchronous message calls we push our request to another services and move forward. In those services we have message queue/broker, then it perform two task:-
+a. Store message from order.
+b. Send to user.
+
+----------------------------------------------------|
+
+--> Monitoring and Logs
+    -> This is follow up by Testing team's, this is used to check whether all things are working fine or not. 
+    
+----------------------------------------------------|
+
+-----> Application
+    - How this application work?
+    - Limitation of this application?
+    - What type of this appplicaiton? It is Data Intensive Applicaiton vs Compute Intensive Application.
+
+--> Latency-> It is time taken to response.
+
+----------------------------------------------------|
+
+--> Data Intensive Applciation(DIA)-> Core focus on data.
+
+    -> Problem-> 
+        a. Database response time is more.
+        b. Network calls take time.
+        c. Server work slowly.
+    
+    -> In this we don't tell client to upgrade the CPU, but we make changes in our system.
+
+    -> Example->
+        a. Instagram Feed.
+        b. WhatsApp Message.
+        c. Banking Transaction.
+        d. Analytics Dashboard.
+        e. Log Processing System.
+
+    -> Worries->
+        a. How fast can we read the data?
+        b. How safely are we going to store the data?
+        c. How many users can access it simultaneously.
+    
+    -> Components this process are lie->
+        a. Databases
+        b. Cashing
+        c. Replication
+        d. Sharding
+        e. Consistency
+
+----------------------------------------------------|
+
+--> Compute Intensive Applicaiton(CIA)-> In this ammount of data retrievement from database is low, but calculation is high.
+
+    -> Challenges->
+        a. CPU/ GPU Bound.
+    
+    -> Example->
+        a. Image Processing.
+        b. Video Rendreing.
+        c. ML Model Training.
+        d. Simulation.
+
+    -> Worries->
+        a. How fast can we compute?
+        b. Can we parallelize this work?
+        c. How to reduce the computational cost?
+        d. Can we use GPU instead of CPU?
+
+----------------------------------------------------|
+
+--> It can be both Data Intensive and Compute Intensive.
+    -> Example->
+        - Youtube-> 
+            a. Data Intensive->  Serving Video
+            b. Compute Intensive->  Recommendation Video
+    
+-----> How to know which feature to follow?
+    -> If time lost in in data movement, then Data Intensive.
+    -> If time lost in in computation movement, then Compute Intensive.
+
+----------------------------------------------------|
+
+--> Requirements
+
+    1. Functional Requirement->
+        - All feature.
+    2. Non Functional Requirement->
+        -  Other things, like response time and etc.
+
+    -> Example->
+        Amazon->
+        1. Functional Requirement->
+
+            a. Register
+            b. login
+            c. See Product
+            d. Search Product
+            e. Filter Product
+            f. Add Product to Cart
+            g. Apply Coupon Code
+            h. Place order
+            i. Make Payment
+            j. Track order
+        
+        2. Non-Functional Requirement-> Should handle 1 million Daily Active User(DAU).
+
+            a. Response Time
+            b. Avaiability of System [Avaiability]
+            c. Encryption of Data
+            d. Fault Tolerance
+            e. Scalable to 10X traffix [Scalability]
+
+----------------------------------------------------|
+
+--> Non-Functional Requirement->
+
+    1. Scalability-> 
+        [a] Horizontal Scalability
+        [b] Vertical Scalability
+    
+    2. Avaiability-> Uptime
+        [a] SLA
+        [b] SLO
+    
+    3. Reliability-> No Dataloss
+
+    4. Performance-> Latency
+
+    5. Security->
+        [a] Authentication
+        [b] Authorization
+        [c] Encryption
+
+    6. Observability-> Monitoring and Logging.
+
+----------------------------------------------------|
+
+--> Domain Name System(DNS)-> 56.22
