@@ -1,0 +1,159 @@
+-> Sql and NoSql
+
+--> Sql 
+    - Tables
+    - Sevices-> PostGress and MySql
+--> NoSql  
+    -  KeyValues, Columns, Nodes, Graphs, Document
+    - Sevices-> MongoDB
+
+--------------------------------------------------------|
+
+SQL-> 
+    1. Attributes
+    2. Fields
+    3. Entity.
+    4. Constraints
+        -> Unique
+        -> Not Null
+        -> Primary key
+        -> Foreign Key
+        -> Check
+        -> Default
+    5. Join/ Relationship
+        -> One-Many
+        -> Many-One
+        -> Many-Many [Junction Table]
+        -> One-One
+    6. 
+
+--------------------------------------------------------|
+
+Vertical Scaling-> Upgrading single database to scaling.
+
+Horizontal Scaling-> Having different severs at different places.
+
+--------------------------------------------------------|
+
+No-SQL-> 
+    - Advantages->
+        - Easy to scale.
+        - Handle Schemaless.
+        - Linking between different entities.
+        - Every entity stands on its own.
+
+--------------------------------------------------------|
+
+When to use Sql and No-Sql?
+    -> Sql
+        - Payment, Tansaction, Consistency.
+        - Consistency > Availability.
+    -> No-Sql   
+        - Scale, Speed, Unstructed data
+        - Availability & Scalabilty > Consistency
+
+--------------------------------------------------------|
+        
+Types of NoSql
+
+    1. Key-Value-> 
+        - Cache, Cookies, Data Storage.
+        - Key(Unique) and Values(Any Data Type).
+        - We don't have to follow any structure.
+        - We don;t ahve to maintain any relationship.
+    
+    2. Columnal DB->
+        - We can read data from column wise.
+        - Good for Analysis.
+        - In Read it is fast.
+        - In Write it is slow as compared to SQL.
+        - Ex-> 
+            - Google BigQuery.
+            - Amazon RedShift.
+            - Snowflake.
+    
+    3. Graph DB->
+        - Node and Edges.
+        - This contain relationship and properties.
+        - Used by Data Scientist to find pattern.
+        - Ex-> 
+            - Gramlin.
+            - SparkQL.
+            - Cypher.
+
+    4. Document DB->
+        - In this we write in form of document and store in JSON.
+        - Flexible.
+        - Schemaless.
+        - No Relationship.
+        - In Logging System.
+        - In Profile.
+        - In Image, Video and Text.
+        - Ex->
+            - CoucheDB
+            - MongoDB
+
+--------------------------------------------------------| 
+
+Cache->
+    - Reduce latency.
+    - Store essential data in frontend system on user side.
+    
+    1. CACHE HIT->
+        - Request from frontend to backend and we found data in cache it is called CACHE HIT.
+        - Fast Responses.
+    2. CACHE MISS->
+        - We request data from frontend to backend but we don't find it in cache and we have to fetch from database it called CACHE MISS.
+        - Slow Responses.
+    3. TTL(Time To Live)
+        - It is time which show for how long the data is going to be in cache.
+        - Expire.
+
+
+    -> How to store CACHE?
+        - We store in form of key-value and TTL form.
+
+    -> Cache Strategy
+
+        1. RTC(Read Through Cache)->
+            - We write directly to database.
+            - We read first from database and if it is not found then only we will fetch from database.
+            a. CACHE HIT
+            b. CACHE MISS
+        
+        2. WTC(Write Through Cache)-> 
+            - In this  we write data to cache first and then it goes to database.
+            - We used when we need latestdata and store values.
+
+        3. WAC(Write Around Cache)->
+            - Write direcly to database.
+            - No Cache Updated.
+            - Read only from Cache.
+                CACHE HIT-> Cool.
+                CACHE MISS-> Fetch From Database-> Update Cache-> Backend.
+            - Ex->  Twitter.
+        
+        4. WBC(Write Back Cache)->
+            - Write-> Cache-> Database(Asych).
+            - Asynchronize.
+                - Error handling.
+            - Fast, speed matter.
+            - Read from Cache.
+                - CACHE HIT.
+                - CACHE MISS-> Fetch from DB-> Update Cache-> Backend.
+            - Speed > Consistency.
+            - High Write Traffic.
+            - Ex-> Swiggy/Zomoto.
+        
+    -> Cache Ejection Policies->
+
+        1. LRU(Least Recent Use)
+        2. MRU(Most Recent Use)
+        3. LFU(Least Frequently Use)
+        4. FIFO(First In First Out)
+        5. LIFO(Last In First Out)
+
+--------------------------------------------------------|
+--------------------------------------------------------|
+--------------------------------------------------------|
+--------------------------------------------------------|

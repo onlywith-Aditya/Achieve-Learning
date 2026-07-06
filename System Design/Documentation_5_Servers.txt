@@ -1,0 +1,64 @@
+If there  are many server, how we will decide where to read and write data.
+
+We use Load     Balancer.
+
+--------------------------------------------------------|
+
+Load Balancer->
+    - It decided which server to choose.
+
+    1.  Choosing server->
+        - We use Algorithms which decide which server to load.
+        - Few Algorithms are->
+
+        [a.] Round Robin->
+            - Time Quanta.
+            - Easy to Understand.
+            - Counter User.
+            - Disadvantages->
+                - Different configuration of server.
+                - Load are same on each server.
+        
+        [b.]  GEO Based Algo->
+            - Closest Server  based on Geography.
+            - Disadvantages->
+                - Multiple region info.
+                - Multiple Db.
+                - Takedown of server.
+                - VPN 
+                
+        [c.]  Least Connection Algo->
+            - Usign server which are using least connection.
+            - Based on number of connection.
+            - Useful  in Sticky Session.
+                -> Where we have to maintain sesssion for cnnection, like gaming, video and etc.
+                - Response Faster.
+            
+            - Disadvantages->
+                - Maintain connection, and check constant.
+                - If server 1 is less optimal and configured as compared to Server 2.
+
+        [d.]  Least Time Algo->
+            - Based on Response Time.
+            - If response time of server is low then configuration of that  server is high.
+            - Real time application.
+            - Ex->
+                - Trading application.
+                - Search Engine.
+            - Disadvantages->
+                - Check Average Response Time every time.
+
+        [e.]  IP Hash Algo->
+            - IP goes to loadbalancer and it decided unique number and based on it, it decide server.
+            - Disadvantages->
+                - Scaling Problem.
+                - If one connenction loss,  then we have to distribute to other server.
+            
+        [f.]  Weighted Round Robin->
+            - In this configuration and weight of server increase.
+            - Based on it we decide server.
+
+-> We use Hybrid Based Algo, we reli on multiple algorithms.
+
+    2. Health Check
+    03:15:00

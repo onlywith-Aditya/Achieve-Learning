@@ -192,4 +192,35 @@ b. Send to user.
 
 ----------------------------------------------------|
 
---> Domain Name System(DNS)-> 56.22
+--> Domain Name System(DNS)-> 
+    - There are two types of domains-> Main domain and sub domain.
+    - System communicate with IP addresses.
+
+
+    ---> Domain Resolver-> Do all this things.
+
+        - This domain and IP we stored in server, and may be in multiple servers.
+
+        - There are 13 root server in this world.(a to m)
+
+        - This root server search for top level domain.-> .com, .in and etc.
+
+        - Then root server send IP address of that service and server which are handling .com or top level domain.
+
+        - They give IP address of Authoritative Name Server(GoDaddy).
+
+        - Then we have to make call to them and then we get our domain and view our web page.
+
+    ---> Cache
+
+        - Domain Resolve is time taken process, but next time it will store information in Cache for fast access.    
+
+        - Cache are stored in this three location->
+            1. Browser Cache
+            2. OS Cache
+            3. DNS Resolver Cache
+
+    ---> Zone
+        
+        - This different domain of one page, are create zone.
+            - Ex-> India.com, India.in and etc.

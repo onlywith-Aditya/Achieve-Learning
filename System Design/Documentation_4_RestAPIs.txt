@@ -1,0 +1,74 @@
+----> REST API(Represnttional Stat Transfer)->
+    - JSON->
+        - Array 
+        - Object
+        - With combination of Array and Object we make it in key:value pair and send our data.
+            - Value can be any datatype.
+    
+
+    - EndPoints-> 
+        - Method + Path
+        - Method-> Get and Post
+        - Path-> https://www.google.com/api/resource
+
+        - To get all users->
+            - Get /users
+        - Get specific user
+            - Get /users/{id}
+        - Adding user
+            - Post /users
+        - Replace User Data.
+            - Put /users/{id}   
+        - Partially Update
+            - Patch /users/{id}
+        - Delete id
+            - Delete /users/{id}
+
+    - Nested Data-> 
+        - Assume we have users, blogs, and comments.
+        - /users-> GET/PUSH/PUT/DELETE/PATCH
+        - /blogs-> GET /blogs/{id}/comments
+                -> GET /users/{id}/comments
+
+    - Nesting vs Filtering
+        -> Nesting- If relationship are clear we can use Nesting.
+            Ex-> GET /users/{id}/comments
+
+        -> Filtering- If relationship is complex we can go with Filtering.
+            Ex-> /comments?post_id=123
+
+----------------------------------------------------|
+
+    -> How do we pass the data to EndPoints?
+        - Path-> Unique Identifier(id/slug)
+        - Query Parameter-> Filtering/Sorting.
+            Ex-> blogs?sort=asc.
+        - Body-> Secure parameters.
+            Ex-> username and password.
+
+----------------------------------------------------|
+
+    -> Responses ->
+        - Response Code->
+            1. 200:- OK
+            2. 201:- CREATED
+            3. 204:- NO CONTENT
+            4. 301:- PERMANENT REDIRECT
+            5. 302:- TEMPORARY REDIRECT
+            6. 400:- BAD REQUEST
+            7. 401:- UNAUTHORIZED
+            8. 403:- FORBIDDEN
+            9. 403:- PAGE NOT FOUND
+            10. 500:- INTERNAL SERVER ERROR
+
+        - Response Body->
+            - Return Array.
+            - Return Object.
+            - Return data as a nested object.
+
+    
+
+        
+    
+
+----------------------------------------------------|

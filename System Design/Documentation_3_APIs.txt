@@ -1,0 +1,32 @@
+-----> API(Application Programing Interface)->
+
+        - Primary usage to access functions from other service provider.
+        
+        1. Give access to other application.
+        2. Give access to our front-end application.
+
+    
+    -> Types of APIs->
+        1. Rest-> Represnttional State Transfer.
+            -> JSON(Javascript Object Notation).
+
+        2. SOAP-> Simple Objecty Access protocols
+            -> XML
+
+        -> We can also convert XML and convert it to JSON.
+
+        3. GraphQL-> Graph Query Language.
+
+        4. GRCP-> Remote Procedural Calls
+            -> No XML/JSON.
+            -> Protocols and Buffers.
+            -> Smaller in Size.
+            -> Faster to Transfer.
+
+----------------------------------------------------|
+
+----> Web Sockets
+    -> Notification, Chatting Stream, where real time things are use.
+
+    -> It make connenction and then it can be work backend also.
+    
